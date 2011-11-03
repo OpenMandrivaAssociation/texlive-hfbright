@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /fonts/ps-type1/hfbright
+# catalog-date 2006-12-17 23:49:42 +0100
+# catalog-license lppl
+# catalog-version undef
 Name:		texlive-hfbright
 Version:	20061217
 Release:	1
@@ -96,6 +102,7 @@ parts of the Computer Modern Bright fonts.
 %doc %{_texmfdistdir}/source/fonts/hfbright/generate.sh
 %doc %{_texmfdistdir}/source/fonts/hfbright/install.sh
 %doc %{_texmfdistdir}/source/fonts/hfbright/simplify-rename.pe
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -106,3 +113,5 @@ parts of the Computer Modern Bright fonts.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar dvips fonts doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
