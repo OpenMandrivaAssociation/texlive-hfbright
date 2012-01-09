@@ -1,4 +1,4 @@
-# revision 15878
+# revision 25054
 # category Package
 # catalog-ctan /fonts/ps-type1/hfbright
 # catalog-date 2006-12-17 23:49:42 +0100
@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-hfbright
 Version:	20061217
-Release:	2
+Release:	3
 Summary:	The hfbright fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/ps-type1/hfbright
@@ -33,7 +33,6 @@ parts of the Computer Modern Bright fonts.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/dvips/hfbright/config.hfbright
 %{_texmfdistdir}/fonts/afm/public/hfbright/hfbr10.afm
 %{_texmfdistdir}/fonts/afm/public/hfbright/hfbr17.afm
 %{_texmfdistdir}/fonts/afm/public/hfbright/hfbr8.afm
@@ -89,6 +88,10 @@ parts of the Computer Modern Bright fonts.
 %{_texmfdistdir}/fonts/type1/public/hfbright/hfsltl10.pfb
 %{_texmfdistdir}/fonts/type1/public/hfbright/hftl10.pfb
 %doc %{_texmfdistdir}/doc/fonts/hfbright/README
+%doc %{_texmfdistdir}/doc/fonts/hfbright/config.hfbright
+%doc %{_texmfdistdir}/doc/fonts/hfbright/generate.sh
+%doc %{_texmfdistdir}/doc/fonts/hfbright/install.sh
+%doc %{_texmfdistdir}/doc/fonts/hfbright/simplify-rename.pe
 #- source
 %doc %{_texmfdistdir}/source/fonts/hfbright/generate.sh
 %doc %{_texmfdistdir}/source/fonts/hfbright/install.sh
@@ -102,4 +105,4 @@ parts of the Computer Modern Bright fonts.
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar dvips fonts doc source %{buildroot}%{_texmfdistdir}
+cp -fpar fonts doc source %{buildroot}%{_texmfdistdir}
