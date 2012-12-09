@@ -106,3 +106,21 @@ parts of the Computer Modern Bright fonts.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Mon Jan 09 2012 Paulo Andrade <pcpa@mandriva.com.br> 20061217-3
++ Revision: 758890
+- Update to latest upstream release
+
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20061217-2
++ Revision: 752547
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20061217-1
++ Revision: 718616
+- texlive-hfbright
+- texlive-hfbright
+- texlive-hfbright
+- texlive-hfbright
+
