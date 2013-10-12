@@ -1,19 +1,18 @@
-# revision 25054
+# revision 29349
 # category Package
 # catalog-ctan /fonts/ps-type1/hfbright
-# catalog-date 2006-12-17 23:49:42 +0100
+# catalog-date 2012-07-13 13:47:30 +0200
 # catalog-license lppl
 # catalog-version undef
 Name:		texlive-hfbright
-Version:	20061217
-Release:	3
+Version:	20120713
+Release:	1
 Summary:	The hfbright fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/ps-type1/hfbright
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hfbright.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hfbright.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hfbright.source.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -92,35 +91,13 @@ parts of the Computer Modern Bright fonts.
 %doc %{_texmfdistdir}/doc/fonts/hfbright/generate.sh
 %doc %{_texmfdistdir}/doc/fonts/hfbright/install.sh
 %doc %{_texmfdistdir}/doc/fonts/hfbright/simplify-rename.pe
-#- source
-%doc %{_texmfdistdir}/source/fonts/hfbright/generate.sh
-%doc %{_texmfdistdir}/source/fonts/hfbright/install.sh
-%doc %{_texmfdistdir}/source/fonts/hfbright/simplify-rename.pe
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a0 -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar fonts doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Mon Jan 09 2012 Paulo Andrade <pcpa@mandriva.com.br> 20061217-3
-+ Revision: 758890
-- Update to latest upstream release
-
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20061217-2
-+ Revision: 752547
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20061217-1
-+ Revision: 718616
-- texlive-hfbright
-- texlive-hfbright
-- texlive-hfbright
-- texlive-hfbright
-
+cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
