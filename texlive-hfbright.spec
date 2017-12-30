@@ -5,8 +5,8 @@
 # catalog-license lppl
 # catalog-version undef
 Name:		texlive-hfbright
-Version:	20120713
-Release:	9
+Version:	20170414
+Release:	1
 Summary:	The hfbright fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/ps-type1/hfbright
