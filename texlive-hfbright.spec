@@ -1,18 +1,12 @@
-# revision 29349
-# category Package
-# catalog-ctan /fonts/ps-type1/hfbright
-# catalog-date 2012-07-13 13:47:30 +0200
-# catalog-license lppl
-# catalog-version undef
 Name:		texlive-hfbright
-Version:	20190228
+Version:	29349
 Release:	1
 Summary:	The hfbright fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/ps-type1/hfbright
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hfbright.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hfbright.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hfbright.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hfbright.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -23,12 +17,12 @@ These are Adobe Type 1 versions of the OT1-encoded and maths
 parts of the Computer Modern Bright fonts.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -94,7 +88,7 @@ parts of the Computer Modern Bright fonts.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
