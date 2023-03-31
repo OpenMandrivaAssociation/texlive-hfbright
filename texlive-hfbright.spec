@@ -1,6 +1,6 @@
 Name:		texlive-hfbright
 Version:	29349
-Release:	1
+Release:	2
 Summary:	The hfbright fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/ps-type1/hfbright
