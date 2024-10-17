@@ -3,7 +3,7 @@ Version:	29349
 Release:	2
 Summary:	The hfbright fonts
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/ps-type1/hfbright
+URL:		https://www.ctan.org/tex-archive/fonts/ps-type1/hfbright
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hfbright.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hfbright.doc.r%{version}.tar.xz
