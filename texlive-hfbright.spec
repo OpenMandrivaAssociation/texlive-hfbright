@@ -12,9 +12,17 @@ Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/hfbright.r%{tl_r
 Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/hfbright.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
 BuildSystem:	texlive
-Provides:	texlive(%{tl_name}) = %{tl_revision}
+Requires:	texlive-tlpkg
+Provides:	texlive(%{tl_name}) = %{version}
 
 %description
 These are Adobe Type 1 versions of the OT1-encoded and maths parts of
 the Computer Modern Bright fonts.
 
+
+%install -a
+mkdir -p %{buildroot}%{_texmf_updmap_d}
+cat > %{buildroot}%{_texmf_updmap_d}/%{tl_name} <<'TL_DROPIN_EOF'
+# from hfbright:
+MixedMap hfbright.map
+TL_DROPIN_EOF
